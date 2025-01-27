@@ -22,7 +22,7 @@ class OwnAuth
                 'message'=>'Unauthorized'
                 ]);
         }
-        //$request -> attributes('user',$ath);
+        $request->merge(["userAuth"=>$ath]);
         return $next($request);
     }
 }

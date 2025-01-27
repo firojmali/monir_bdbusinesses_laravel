@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\challanItem;
+use App\Models\role;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ChallanItemController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class ChallanItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(challanItem $challanItem)
+    public function show(role $role)
     {
         //
     }
@@ -43,7 +43,7 @@ class ChallanItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(challanItem $challanItem)
+    public function edit(role $role)
     {
         //
     }
@@ -51,7 +51,7 @@ class ChallanItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, challanItem $challanItem)
+    public function update(Request $request, role $role)
     {
         //
     }
@@ -59,7 +59,7 @@ class ChallanItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(challanItem $challanItem)
+    public function destroy(role $role)
     {
         //
     }

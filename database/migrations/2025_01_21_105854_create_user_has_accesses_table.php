@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('user_has_accesses', function (Blueprint $table) {
             $table->id();
+            $table->string('user_uid', 64);
+            $table->string('region_uid', 64);
+            $table->integer('region_type')->comment('1: division, 2: district, 3: upazila, 4: union, 5: ward, 6:village, 7:citycorporation, 8: city, 9: area');
             $table->timestamps();
-            $table->Integer('stock_closing')->comment('YYYYMM')->nullable();
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('user_has_accesses');
     }
 };

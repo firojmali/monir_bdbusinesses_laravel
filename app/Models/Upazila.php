@@ -12,7 +12,7 @@ class Upazila extends Model
 
     public function unions()
     {
-        return $this->hasOne(Union::class, 'upazila_code_id','code_id')->oldestOfMany();
+        return $this->hasMany(Union::class, 'upazila_code_id','code_id');
     }
     public function district()
     {

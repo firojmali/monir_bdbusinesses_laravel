@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Setting;
+use App\Models\UserArea;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class SettingController extends Controller
+class UserAreaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +35,7 @@ class SettingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Setting $setting)
+    public function show(UserArea $userArea)
     {
         //
     }
@@ -43,7 +43,7 @@ class SettingController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Setting $setting)
+    public function edit(UserArea $userArea)
     {
         //
     }
@@ -51,7 +51,7 @@ class SettingController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Setting $setting)
+    public function update(Request $request, UserArea $userArea)
     {
         //
     }
@@ -59,7 +59,7 @@ class SettingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Setting $setting)
+    public function destroy(UserArea $userArea)
     {
         //
     }

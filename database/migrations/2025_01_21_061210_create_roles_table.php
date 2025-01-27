@@ -11,14 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('units', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->id();
+            $table->string('uid', 64)->unique();
+            $table->string('name');
+            $table->string('description');
             $table->timestamps();
-            $table->string('entry_by',50);
-            $table->string('history',200)->nullable();
-            $table->string('uid',37)->unique();
-            $table->string('unit',13);
-            $table->string('remarks',100)->nullable();
         });
     }
 
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('units');
+        Schema::dropIfExists('roles');
     }
 };

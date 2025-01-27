@@ -35,11 +35,13 @@ Route::get('/get', function () {
         "b"=>"1",
         "p"=>"28"
     ];
-})->name("login");
+})->name("lh");
 
 //user
+//Route::get('/usercratee', [UserController::class, 'create']);
+Route::get('/getuid', [UserController::class, 'uid']);
 Route::get('/signup', [UserController::class, 'update']);
-Route::post('/login', [UserController::class, 'login']);
+
 
 
 
@@ -79,3 +81,11 @@ Route::post('/upazilas', [App\Http\Controllers\UpazilaController::class, 'create
 Route::get('/upazilas', [App\Http\Controllers\UpazilaController::class, 'index']);
 Route::post('/update/unions', [App\Http\Controllers\UnionController::class, 'create']);
 Route::get('/unions', [App\Http\Controllers\UnionController::class, 'index']);
+
+
+//for vue - admin  monir for business
+
+Route::get('/info', [UserController::class, 'info'])->middleware('auth');
+Route::post('/login', [UserController::class, 'login']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+Route::post('user/areas', [UserController::class, 'myareas'])->middleware('auth');
